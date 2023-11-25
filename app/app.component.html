@@ -1,0 +1,28 @@
+<input type="text" [(ngModel)]="variavel">
+<div [ngSwitch]="variavel">
+
+  <section *ngSwitchCase=" 'Ficção' ">
+    <ul *ngFor="let filme of filmeFic">
+      <h2>{{filme.nome}}</h2>
+      <h3>{{filme.descricao}}</h3>
+      <img [src]="filme.imagem" alt="">
+    </ul>
+  </section>
+
+  <section *ngSwitchCase=" 'Guerra' ">
+    <ul *ngFor="let filme of filmeGuerra">
+      <h2>{{filme.nome}}</h2>
+      <h3>{{filme.descricao}}</h3>
+      <img [src]="filme.imagem" alt="">
+    </ul>
+  </section>
+
+  <section *ngSwitchCase=" 'Infantil' ">
+    <ul *ngFor="let filme of filmeInfantil">
+      <h2>{{filme.nome}}</h2>
+      <h3>{{filme.descricao}}</h3>
+      <img [src]="filme.imagem" alt="">
+    </ul>
+  </section>
+
+</div>
